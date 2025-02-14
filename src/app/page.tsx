@@ -1,7 +1,7 @@
 "use client";
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, RefObject } from 'react';
 import Link from 'next/link';
 import { DiHtml5, DiCss3, DiSass, DiJavascript1, DiReact, DiNodejsSmall, DiAws } from 'react-icons/di';
 import { SiMongodb } from "react-icons/si";
