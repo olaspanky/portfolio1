@@ -14,6 +14,8 @@ import spawn from "../../../public/assets/spawn.png";
 import tlight from "../../../public/assets/tlight.png";
 import versus from "../../../public/assets/versus.png";
 import Sonus from "../../../public/assets/sonus.png";
+import footer from "../components/Footer";
+
 
 interface Project {
   id: number;
@@ -55,7 +57,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Prosolar Website",
-    description: "A task management app with drag-and-drop functionality.",
+    description: "A Website where you can get instant quote on your preferred solar option.",
     image: psolar,
     liveLink: "https://prosolarng.com/",
     techStack: [
@@ -68,7 +70,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: "JBC Club Website",
-    description: "A task management app with drag-and-drop functionality.",
+    description: "A website that represents Jericho Businessmen Club .",
     image: jbc,
     liveLink: "https://summit.jbcibadan.org/",
     techStack: [
@@ -81,7 +83,7 @@ const projects: Project[] = [
   {
     id: 5,
     title: "Versus",
-    description: "A task management app with drag-and-drop functionality.",
+    description: "A data science webapp for pharmaceutical companies to make informed decisions.",
     image: versus,
     liveLink: "https://trafficpulse.pbrinsight.com.ng/",
     techStack: [
@@ -93,7 +95,7 @@ const projects: Project[] = [
   {
     id: 6,
     title: "Sonus",
-    description: "A task management app with drag-and-drop functionality.",
+    description: "A data science webapp for Doctors companies to make informed decisions.",
     image: Sonus,
     liveLink: "https://sonus.pbrinsight.com/",
     techStack: [
@@ -118,8 +120,9 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section className="py-5 bg-[#0a0a0a] font-font1 text-xs lg:text-md">
-      <div className="container mx-auto px-4">
+    <section           className='lg:mt-20 h-full flex flex-col gap-3 lg:gap-20 lg:px-20 px-3 py-10 lg:h-screen lg:overflow-y-auto font-font2'
+    >
+    <div className="container mx-auto px-4">
         <div className="text-4xl font-bold text-center text-white mb-12">
           My Projects
         </div>
