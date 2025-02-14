@@ -58,7 +58,7 @@ const Home: React.FC = () => {
 
   const handleNavClick = (section: string) => {
     setActiveSection(section);
-    const sectionElement = sectionRefs[section].current;
+    const sectionElement = (sectionRefs as Record<string, RefObject<HTMLDivElement>>)[section]?.current;
     if (sectionElement && contentRef.current) {
       contentRef.current.scrollTo({
         top: sectionElement.offsetTop,
