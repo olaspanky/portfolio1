@@ -9,7 +9,7 @@ import { SiTailwindcss, SiSanity, SiShadcnui } from 'react-icons/si';
 import { RiNextjsFill, RiTailwindCssLine } from "react-icons/ri";
 import Image from 'next/image';
 import me from '../../public/me.png';
-
+import Footer from './components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 const Home: React.FC = () => {
@@ -41,9 +41,7 @@ const Home: React.FC = () => {
         setActiveSection('stack');
       } else if (scrollPosition < projectsPos - 100) {
         setActiveSection('experience');
-      } else {
-        setActiveSection('projects');
-      }
+      } 
     };
 
     const contentContainer = contentRef.current;
@@ -80,13 +78,16 @@ const Home: React.FC = () => {
 
       <div className='flex flex-col lg:flex-row text-white min-h-screen'>
         {/* Left Grid - Static */}
-        <div className='lg:sticky top-0 lg:h-screen lg:w-5/12 flex flex-col gap-9 lg:px-9 px-3 py-10 font-font1'>
+        <div className='lg:sticky top-0 lg:h-screen lg:w-5/12 flex flex-col gap-9 lg:px-9 px-3 py-10 font-font1 text-center lg:text-left'>
           <h1 className='text-4xl font-extrabold'>Olakareem Omobolarinwa</h1>
           <h2 className='text-2xl font-semibold text-teal-300'>Front-end Web Developer</h2>
+          <div className='flex justify-center items-center'>
           <Image src={me} alt='Olakareem Omobolarinwa' className='rounded-full' width={200} height={200} />
+
+          </div>
           <p className='text-lg'>I build Web and Mobile Products that guarantee awesome user experiences, scalability, and speed.</p>
 
-          <nav className="sidebar flex flex-col gap-5 ml-5 mt-6">
+          <nav className="sidebar hidden lg:flex flex-col gap-5 ml-5 mt-6">
             <button
               onClick={() => handleNavClick("about")}
               className={`text-left transition-transform duration-300 ease-in-out ${
@@ -127,9 +128,9 @@ const Home: React.FC = () => {
         {/* Right Grid - Scrollable */}
         <div
           ref={contentRef}
-          className='lg:w-7/12 h-full flex flex-col gap-36 lg:px-20 px-3 py-10 lg:h-screen lg:overflow-y-auto font-font2'
+          className='lg:w-7/12 h-full flex flex-col gap-3 lg:gap-20 lg:px-20 px-3 py-10 lg:h-screen lg:overflow-y-auto font-font2'
         >
-          <section ref={sectionRefs.about} className='leading-normal flex flex-col gap-3 min-h-[400px]'>
+          <section ref={sectionRefs.about} className='leading-normal flex flex-col gap-3 h-auto my-9'>
             <h2 className='text-2xl font-semibold'>About Me</h2>
             <p>
             I am a results-driven Software Engineer with 5+ years of professional experience, specializing in JavaScript and its frameworks. I am passionate about building high-quality, scalable web applications that deliver exceptional user experiences. I thrive on tackling impactful challenges and continuously refining my skills to stay ahead of industry trends.
@@ -145,7 +146,7 @@ I have a proven track record of developing efficient, scalable solutions, with a
             </p>
           </section>
 
-          <section ref={sectionRefs.stack} className="py-16 min-h-[400px]">
+          <section ref={sectionRefs.stack} className=" h-auto mt-9">
             <div className="mx-auto">
               <h2 className="text-2xl font-semibold mb-8">My Tech Stack</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -218,7 +219,7 @@ I have a proven track record of developing efficient, scalable solutions, with a
             </div>
           </section>
 
-          <section ref={sectionRefs.experience} className='flex flex-col py-16 gap-3 min-h-[400px] mb-24'>
+          <section ref={sectionRefs.experience} className='flex flex-col py-16 gap-3 h-auto mb-9'>
             <h2 className='text-2xl font-semibold'>Experience</h2>
             <p className='my-5'>I have worked on numerous freelance projects and contract jobs. Below are a few of my full-time roles:</p>
             {/* Cards */}
@@ -292,7 +293,14 @@ I have a proven track record of developing efficient, scalable solutions, with a
               </div>
             </div>
           </section>
+          <section ref={sectionRefs.projects} className='flex flex-col py-16 gap-3 h-auto'>
+          <div>
+              <Footer/>
+            </div>
+          </section>
 
+
+          
          
         </div>
       </div>

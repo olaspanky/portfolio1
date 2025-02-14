@@ -7,7 +7,7 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center h-20 bg-[#0a0a0a] mb-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center h-20 bg-[#0a0a0a] ">
       <div className="flex space-x-8">
         <Link
           href="/"

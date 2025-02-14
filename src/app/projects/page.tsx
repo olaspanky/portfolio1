@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SiNextdotjs, SiTailwindcss, SiFirebase, SiTypescript, SiExpress } from "react-icons/si";
 import { BsCloudUpload } from "react-icons/bs";
 import { FaNodeJs, FaStripe, FaReact } from "react-icons/fa";
+import Footer from "../components/Footer";
 
 // Import your images
 import jbc from "../../../public/assets/jbc.png";
@@ -11,7 +12,7 @@ import psolar from "../../../public/assets/psolar.png";
 import spawn from "../../../public/assets/spawn.png";
 import tlight from "../../../public/assets/tlight.png";
 import versus from "../../../public/assets/versus.png";
-import Sonus from "../../../public/assets/Sonus.png";
+import Sonus from "../../../public/assets/sonus.png";
 
 interface Project {
   id: number;
@@ -116,7 +117,7 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section className="py-20 bg-[#0a0a0a] font-font1">
+    <section className="py-5 bg-[#0a0a0a] font-font1 text-xs lg:text-md">
       <div className="container mx-auto px-4">
         <div className="text-4xl font-bold text-center text-white mb-12">
           My Projects
@@ -125,7 +126,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-slate-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-72">
                 <Image
@@ -166,6 +167,8 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+        <Footer />
     </section>
   );
 };
