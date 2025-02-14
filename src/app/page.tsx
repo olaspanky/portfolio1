@@ -172,7 +172,7 @@ I have a proven track record of developing efficient, scalable solutions, with a
                 </div>
                 {/* SiShadcnui */}
                 <div className="flex flex-col items-center justify-center">
-                  <SiShadcnui className="text-5xl mb-2 text-black" />
+                  <SiShadcnui className="text-5xl mb-2 text-white" />
                   <p className="text-center text-teal-300">Shadcnui</p>
                 </div>
                 {/* JavaScript */}
