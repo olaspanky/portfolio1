@@ -76,7 +76,7 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className='flex flex-col lg:flex-row text-white h-full'>
+      <div className='flex flex-col lg:flex-row text-white h-full bg-[#0a0a0a]'>
         {/* Left Grid - Static */}
         <div className='lg:sticky top-0  lg:w-5/12 flex flex-col gap-9 lg:px-9 px-3 py-10 font-font1 text-center lg:text-left'>
           <h1 className='text-4xl font-extrabold'>Olakareem Omobolarinwa</h1>

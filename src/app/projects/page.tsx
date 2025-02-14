@@ -120,7 +120,7 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section           className='lg:mt-20 h-full flex flex-col gap-3 lg:gap-20 lg:px-20 px-3 py-10 lg:h-screen lg:overflow-y-auto font-font2'
+    <section           className='lg:mt-20 h-full flex flex-col bg-[#0a0a0a] gap-3 lg:gap-20 lg:px-20 px-3 py-10 lg:h-screen lg:overflow-y-auto font-font2'
     >
     <div className="container mx-auto px-4">
         <div className="text-4xl font-bold text-center text-white mb-12">
