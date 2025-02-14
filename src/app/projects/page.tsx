@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SiNextdotjs, SiTailwindcss, SiFirebase, SiTypescript, SiExpress } from "react-icons/si";
 import { BsCloudUpload } from "react-icons/bs";
 import { FaNodeJs, FaStripe, FaReact } from "react-icons/fa";
+import { JSX } from "react";
 import Footer from "../components/Footer";
 
 // Import your images
